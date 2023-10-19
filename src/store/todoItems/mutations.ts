@@ -2,16 +2,16 @@ import type { MutationTree } from 'vuex/types/index.js'
 import type { ItemsState, Item } from '@store/todoItems/state'
 
 const mutations: MutationTree<ItemsState> = {
-  setItems: (state: ItemsState, items: Item[]) => {
+  SET_ITEMS: (state: ItemsState, items: Item[]) => {
     state.items = items
   },
-  addItem: (state: ItemsState, item: Item) => {
+  ADD_ITEM: (state: ItemsState, item: Item) => {
     state.items.push(item)
   },
-  deleteItem: (state: ItemsState, id: string) => {
+  DELETE_ITEM: (state: ItemsState, id: string) => {
     state.items = state.items.filter((item) => item.id !== id)
   },
-  editItem: (state: ItemsState, editeditem: Item) => {
+  EDIT_ITEM: (state: ItemsState, editeditem: Item) => {
     state.items = state.items.map((item: Item) => (item.id === editeditem.id ? editeditem : item))
   },
   

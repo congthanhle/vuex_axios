@@ -12,7 +12,7 @@ const props = defineProps<{
 const isEditMode = ref(false);
 // Handle the action of pressing the delete button
 const handleDeleteClick = () => {
-	store.dispatch("deleteItem", props.item.id)
+	store.dispatch("DELETE_ITEM", props.item.id)
 }
 // Turn on editing mode for the current item
 const handleEditClick = () => {

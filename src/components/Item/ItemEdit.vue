@@ -23,7 +23,7 @@ const handleSaveClick = () => {
 		todo,
 		completed,
 	}
-	store.dispatch("editItem", editedItem);
+	store.dispatch("EDIT_ITEM", editedItem);
 	handleCancelClick();
 }
 

@@ -21,7 +21,7 @@ const handleSubmitForm = () => {
       completed: completed,
       userId: userId
     }
-    store.dispatch("addItem", newItem);
+    store.dispatch("ADD_ITEM", newItem);
   }
   else {
     alert("Please enter item todo");
